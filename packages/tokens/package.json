@@ -14,7 +14,11 @@
     "./tokens.json": "./dist/tokens.json"
   },
   "scripts": {
-    "build": "echo \"token build arrives in phase 1 (Style Dictionary, ADR-004)\""
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/color.test.mjs test/gate.test.mjs test/build.test.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.7.1"
   },
   "publishConfig": {
     "access": "public",
