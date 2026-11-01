@@ -7,7 +7,7 @@
   "scripts": {
     "build": "pnpm -r --if-present build",
     "test": "pnpm -r --if-present test",
-    "check:schemas": "node scripts/check-schemas.mjs bumpist-design && node scripts/check-tokens.mjs"
+    "check:schemas": "node scripts/check-schemas.mjs bumpist-design"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.0"

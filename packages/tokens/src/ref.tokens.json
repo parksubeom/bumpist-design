@@ -57,6 +57,17 @@
       "slow": {
         "$value": "250ms"
       }
+    },
+    "shadow": {
+      "overlay": {
+        "$description": "The one shadow the system allows: menus, dialogs and popovers that float above the page.",
+        "light": {
+          "$value": "0 8px 24px 0 rgb(15 23 42 / 0.12)"
+        },
+        "dark": {
+          "$value": "0 8px 24px 0 rgb(2 6 23 / 0.48)"
+        }
+      }
     }
   }
 }
