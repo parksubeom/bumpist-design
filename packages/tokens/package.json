@@ -1,0 +1,28 @@
+{
+  "name": "@bumpist/tokens",
+  "version": "0.0.0",
+  "description": "Design tokens for the Bumpist design system: 6 themes × light/dark × 2 profiles, as CSS variables and JSON.",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "./css": "./dist/tokens.css",
+    "./tailwind.css": "./dist/tailwind.css",
+    "./tokens.json": "./dist/tokens.json"
+  },
+  "scripts": {
+    "build": "echo \"token build arrives in phase 1 (Style Dictionary, ADR-004)\""
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parksubeom/bumpist-design.git",
+    "directory": "packages/tokens"
+  }
+}

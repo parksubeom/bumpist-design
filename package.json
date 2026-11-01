@@ -1,0 +1,16 @@
+{
+  "name": "bumpist-design",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "test": "pnpm -r --if-present test",
+    "check:schemas": "node scripts/check-schemas.mjs bumpist-design && node scripts/check-tokens.mjs"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

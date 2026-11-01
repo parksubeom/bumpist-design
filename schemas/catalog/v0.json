@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parksubeom.github.io/bumpist-design/schemas/catalog/v0.json",
+  "title": "Bumpist component catalog (C2)",
+  "description": "Machine-readable list of components and blocks a design system offers. bumpist-agents reads this instead of source code. Any design system can publish one.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "system",
+    "components"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "system": {
+      "type": "object",
+      "required": [
+        "name",
+        "version",
+        "themes"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "consumer",
+              "workspace"
+            ]
+          }
+        }
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "kind",
+          "import",
+          "use",
+          "avoid"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*$"
+          },
+          "kind": {
+            "enum": [
+              "component",
+              "block",
+              "provisional"
+            ]
+          },
+          "import": {
+            "type": "string"
+          },
+          "use": {
+            "type": "string",
+            "description": "When to use it"
+          },
+          "avoid": {
+            "type": "string",
+            "description": "When not to use it, and what to use instead"
+          },
+          "profiles": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "consumer",
+                "workspace"
+              ]
+            }
+          },
+          "requiredStates": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "ready",
+                "loading",
+                "empty",
+                "error",
+                "forbidden",
+                "disabled"
+              ]
+            }
+          },
+          "props": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "a11y": {
+            "type": "string"
+          },
+          "story": {
+            "type": "string",
+            "format": "uri"
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z0-9]+-[0-9]{3}$"
+            }
+          },
+          "since": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

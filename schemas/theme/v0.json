@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://parksubeom.github.io/bumpist-design/schemas/theme/v0.json",
+  "title": "Bumpist theme (C1)",
+  "description": "One theme of a Bumpist-compatible design system. Five brand inputs plus font, radius and motion; sys tokens per mode; spacing/layout per profile. Values follow the W3C Design Tokens Community Group format ($value/$type).",
+  "type": "object",
+  "required": [
+    "$schema",
+    "id",
+    "name",
+    "inputs",
+    "modes",
+    "profiles"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "stable",
+        "deprecated"
+      ]
+    },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "primary",
+        "accent",
+        "bg",
+        "text",
+        "textMuted",
+        "radius"
+      ],
+      "properties": {
+        "primary": {
+          "$ref": "#/$defs/hex"
+        },
+        "accent": {
+          "$ref": "#/$defs/hex"
+        },
+        "bg": {
+          "$ref": "#/$defs/hex"
+        },
+        "text": {
+          "$ref": "#/$defs/hex"
+        },
+        "textMuted": {
+          "$ref": "#/$defs/hex"
+        },
+        "radius": {
+          "enum": [
+            12,
+            16
+          ],
+          "description": "UI-005"
+        },
+        "fontHeading": {
+          "type": "string"
+        },
+        "fontBody": {
+          "type": "string"
+        },
+        "motion": {
+          "type": "string"
+        }
+      }
+    },
+    "modes": {
+      "type": "object",
+      "required": [
+        "light",
+        "dark"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "light": {
+          "$ref": "#/$defs/mode"
+        },
+        "dark": {
+          "$ref": "#/$defs/mode"
+        }
+      }
+    },
+    "profiles": {
+      "type": "object",
+      "required": [
+        "consumer",
+        "workspace"
+      ],
+      "properties": {
+        "consumer": {
+          "$ref": "#/$defs/profile"
+        },
+        "workspace": {
+          "$ref": "#/$defs/profile"
+        }
+      }
+    },
+    "contrast": {
+      "type": "array",
+      "description": "Filled by the build: every text/background pair and its ratio.",
+      "items": {
+        "type": "object",
+        "required": [
+          "fg",
+          "bg",
+          "ratio",
+          "pass"
+        ],
+        "properties": {
+          "mode": {
+            "enum": [
+              "light",
+              "dark"
+            ]
+          },
+          "fg": {
+            "type": "string"
+          },
+          "bg": {
+            "type": "string"
+          },
+          "ratio": {
+            "type": "number"
+          },
+          "pass": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hex": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "token": {
+      "type": "object",
+      "required": [
+        "$value"
+      ],
+      "properties": {
+        "$value": {},
+        "$type": {
+          "type": "string"
+        },
+        "$description": {
+          "type": "string"
+        }
+      }
+    },
+    "tokenGroup": {
+      "type": "object",
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/token"
+          },
+          {
+            "$ref": "#/$defs/tokenGroup"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "mode": {
+      "type": "object",
+      "required": [
+        "sys"
+      ],
+      "properties": {
+        "sys": {
+          "type": "object",
+          "required": [
+            "color"
+          ],
+          "properties": {
+            "color": {
+              "type": "object",
+              "required": [
+                "bg",
+                "surface",
+                "text",
+                "text-muted",
+                "primary",
+                "primary-fg",
+                "accent",
+                "accent-fg"
+              ],
+              "additionalProperties": {
+                "$ref": "#/$defs/token"
+              }
+            }
+          }
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "gap",
+        "section",
+        "baseViewport"
+      ],
+      "properties": {
+        "gap": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "rowHeight": {
+          "type": "string"
+        },
+        "baseViewport": {
+          "enum": [
+            375,
+            1280
+          ]
+        }
+      }
+    }
+  }
+}

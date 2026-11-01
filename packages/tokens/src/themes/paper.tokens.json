@@ -1,0 +1,98 @@
+{
+  "$schema": "https://parksubeom.github.io/bumpist-design/schemas/theme/v0.json",
+  "id": "paper",
+  "name": "Paper",
+  "status": "draft",
+  "inputs": {
+    "primary": "#6366F1",
+    "accent": "#F43F5E",
+    "bg": "#F8FAFC",
+    "text": "#0F172A",
+    "textMuted": "#475569",
+    "radius": 12,
+    "fontHeading": "Pretendard Variable, Inter, system-ui, sans-serif",
+    "fontBody": "Pretendard Variable, Inter, system-ui, sans-serif",
+    "motion": "150ms"
+  },
+  "modes": {
+    "light": {
+      "sys": {
+        "color": {
+          "bg": {
+            "$value": "#F8FAFC"
+          },
+          "surface": {
+            "$value": "#F1F5F9"
+          },
+          "surface-raised": {
+            "$value": "#FCFDFE"
+          },
+          "text": {
+            "$value": "#0F172A"
+          },
+          "text-muted": {
+            "$value": "#475569"
+          },
+          "primary": {
+            "$value": "#6366F1"
+          },
+          "primary-fg": {
+            "$value": "#F8FAFC"
+          },
+          "accent": {
+            "$value": "#F43F5E"
+          },
+          "accent-fg": {
+            "$value": "#FFF7F8"
+          }
+        }
+      }
+    },
+    "dark": {
+      "sys": {
+        "color": {
+          "bg": {
+            "$value": "#0B1120"
+          },
+          "surface": {
+            "$value": "#111A2E"
+          },
+          "surface-raised": {
+            "$value": "#17223A"
+          },
+          "text": {
+            "$value": "#E2E8F0"
+          },
+          "text-muted": {
+            "$value": "#94A3B8"
+          },
+          "primary": {
+            "$value": "#818CF8"
+          },
+          "primary-fg": {
+            "$value": "#0B1120"
+          },
+          "accent": {
+            "$value": "#FB7185"
+          },
+          "accent-fg": {
+            "$value": "#0B1120"
+          }
+        }
+      }
+    }
+  },
+  "profiles": {
+    "consumer": {
+      "gap": "24px",
+      "section": "48px",
+      "baseViewport": 375
+    },
+    "workspace": {
+      "gap": "16px",
+      "section": "32px",
+      "rowHeight": "40px",
+      "baseViewport": 1280
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@bumpist/ui",
+  "version": "0.0.0",
+  "description": "React components for the Bumpist design system (phase 1).",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@bumpist/tokens": "workspace:^"
+  },
+  "scripts": {
+    "build": "echo \"components arrive in phase 1\""
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parksubeom/bumpist-design.git",
+    "directory": "packages/ui"
+  }
+}
