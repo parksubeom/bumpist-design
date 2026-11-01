@@ -173,13 +173,6 @@
     },
     {
       "mode": "light",
-      "fg": "text",
-      "bg": "input",
-      "ratio": 5.66,
-      "pass": true
-    },
-    {
-      "mode": "light",
       "fg": "focus-ring",
       "bg": "bg",
       "ratio": 4.5,
@@ -253,13 +246,6 @@
       "fg": "negative",
       "bg": "bg",
       "ratio": 13.64,
-      "pass": true
-    },
-    {
-      "mode": "dark",
-      "fg": "text",
-      "bg": "input",
-      "ratio": 5.04,
       "pass": true
     },
     {

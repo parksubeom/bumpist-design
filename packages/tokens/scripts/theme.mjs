@@ -6,6 +6,7 @@ export const MODES = ["light", "dark"];
 export const PROFILES = ["consumer", "workspace"];
 
 // [foreground, background, minimum ratio]
+// `input` is the input border color (like shadcn's --input); the input background stays bg or surface.
 export const CONTRAST_PAIRS = [
   ["text", "bg", 4.5],
   ["text", "surface", 4.5],
@@ -16,7 +17,6 @@ export const CONTRAST_PAIRS = [
   ["positive", "bg", 4.5],
   ["notice", "bg", 4.5],
   ["negative", "bg", 4.5],
-  ["text", "input", 4.5],
   ["focus-ring", "bg", 3],
   ["input", "bg", 3],
 ];
