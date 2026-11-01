@@ -13,7 +13,7 @@
 브랜드 색 다섯 개만 넣으면, 나머지 디자인 값은 알아서 맞춰지는 디자인 시스템이에요.
 
 > [!NOTE]
-> 지금은 v0이에요. 원칙 검사와 첫 테마 초안(paper)까지 있어요. 실제 부품과 Storybook은 v0.1부터, npm 설치는 v1.0부터 돼요.
+> 지금은 v0이에요. paper 테마를 CSS 변수와 Tailwind 설정으로 만들 수 있고, 만들 때 대비와 원칙을 검사해요. 실제 부품과 Storybook은 v0.1부터, npm 설치는 v1.0부터 돼요.
 
 ## 왜 필요한가요
 
@@ -25,19 +25,19 @@ bumpist-design은 디자인 값을 한 곳에서 내보내요. 서비스마다 �
 
 ## 써 보기
 
-지금은 테마 초안이 원칙을 지키는지 검사해 볼 수 있어요.
+지금은 paper 테마로 디자인 값을 만들어 볼 수 있어요.
 
 ```bash
 git clone https://github.com/parksubeom/bumpist-design.git
 cd bumpist-design
 pnpm install
-pnpm check:schemas
+pnpm build
 ```
 
-`✓ paper.tokens.json`이 보이면 통과예요.
+`✓ paper: 24 contrast pairs pass`가 보이면 통과예요. `packages/tokens/dist/`에 `tokens.css`, `tailwind.css`, `tokens.json`이 생겨요.
 
 > [!TIP]
-> `packages/tokens/src/themes/paper.tokens.json`에서 라이트 배경색(`bg`)을 `#FFFFFF`로 바꾸고 다시 돌려 보세요. `UI-003 light bg is pure white`로 멈춰요. 원칙이 실제로 동작하는 걸 볼 수 있어요.
+> `packages/tokens/src/themes/paper.tokens.json`에서 라이트 배경색(`bg`)을 `#FFFFFF`로 바꾸고 다시 만들어 보세요. `paper light: UI-003 bg is pure white`로 멈추고 아무 파일도 만들지 않아요. 원칙이 실제로 동작하는 걸 볼 수 있어요.
 
 개발자가 아니라면 아래 [디자인 원칙](#디자인-원칙)과 [테마](#테마와-프로필)만 읽어도 돼요. 새 서비스의 느낌을 정할 때 가장 가까운 테마를 고르면, 그게 개발자에게 넘길 첫 결정이에요.
 
@@ -141,8 +141,8 @@ flowchart LR
 
 | 시점 | 들어오는 것 |
 | --- | --- |
-| **지금 (v0)** | 테마 형식(C1)과 부품 목록 형식(C2) 정의, paper 테마 초안, 순백·순흑·모서리 원칙 검사 |
-| v0.1 (2주차부터 6주차) | paper 테마를 실제 CSS 변수로, 모든 색 조합의 대비 검사, 부품 10개, Storybook |
+| **지금 (v0)** | 테마 형식(C1)과 부품 목록 형식(C2) 정의, paper 테마를 CSS 변수·Tailwind 설정·JSON으로 만들기(Style Dictionary), 만들 때 대비 검사와 순백·순흑·모서리·상태색 원칙 검사 |
+| v0.1 (2주차부터 6주차) | 부품 10개, Storybook |
 | v0.5 (7주차부터 12주차) | 테마 3종 × 프로필 2종, 부품 22개, 화면 블록 6개 |
 | v1.0 (13주차부터 16주차) | npm 공개 배포(`@bumpist/tokens`, `@bumpist/ui`), Storybook 사이트 |
 | v1.1 (17주차부터 22주차) | 나머지 테마 3종, 부품 13개, 블록 5개, 서비스별 브랜드 표현 |
