@@ -34,16 +34,22 @@
             "$value": "#475569"
           },
           "primary": {
-            "$value": "#6366F1"
+            "$value": "#6062EC"
           },
           "primary-fg": {
             "$value": "#F8FAFC"
           },
           "accent": {
-            "$value": "#F43F5E"
+            "$value": "#DD234C"
           },
           "accent-fg": {
             "$value": "#FFF7F8"
+          },
+          "focus-ring": {
+            "$value": "#6062EC"
+          },
+          "input": {
+            "$value": "#909193"
           }
         }
       }
@@ -77,6 +83,12 @@
           },
           "accent-fg": {
             "$value": "#0B1120"
+          },
+          "focus-ring": {
+            "$value": "#818CF8"
+          },
+          "input": {
+            "$value": "#586174"
           }
         }
       }
@@ -94,5 +106,175 @@
       "rowHeight": "40px",
       "baseViewport": 1280
     }
-  }
+  },
+  "contrast": [
+    {
+      "mode": "light",
+      "fg": "text",
+      "bg": "bg",
+      "ratio": 17.06,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "text",
+      "bg": "surface",
+      "ratio": 16.3,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "text-muted",
+      "bg": "bg",
+      "ratio": 7.24,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "text-muted",
+      "bg": "surface",
+      "ratio": 6.92,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "primary-fg",
+      "bg": "primary",
+      "ratio": 4.5,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "accent-fg",
+      "bg": "accent",
+      "ratio": 4.51,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "positive",
+      "bg": "bg",
+      "ratio": 5.87,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "notice",
+      "bg": "bg",
+      "ratio": 5.83,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "negative",
+      "bg": "bg",
+      "ratio": 9.51,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "text",
+      "bg": "input",
+      "ratio": 5.66,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "focus-ring",
+      "bg": "bg",
+      "ratio": 4.5,
+      "pass": true
+    },
+    {
+      "mode": "light",
+      "fg": "input",
+      "bg": "bg",
+      "ratio": 3.01,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "text",
+      "bg": "bg",
+      "ratio": 15.27,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "text",
+      "bg": "surface",
+      "ratio": 14.07,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "text-muted",
+      "bg": "bg",
+      "ratio": 7.34,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "text-muted",
+      "bg": "surface",
+      "ratio": 6.76,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "primary-fg",
+      "bg": "primary",
+      "ratio": 6.31,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "accent-fg",
+      "bg": "accent",
+      "ratio": 7,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "positive",
+      "bg": "bg",
+      "ratio": 7.99,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "notice",
+      "bg": "bg",
+      "ratio": 8.84,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "negative",
+      "bg": "bg",
+      "ratio": 13.64,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "text",
+      "bg": "input",
+      "ratio": 5.04,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "focus-ring",
+      "bg": "bg",
+      "ratio": 6.31,
+      "pass": true
+    },
+    {
+      "mode": "dark",
+      "fg": "input",
+      "bg": "bg",
+      "ratio": 3.03,
+      "pass": true
+    }
+  ]
 }
