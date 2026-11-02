@@ -34,7 +34,7 @@ pnpm install
 pnpm build
 ```
 
-`✓ paper: 24 contrast pairs pass`가 보이면 통과예요. `packages/tokens/dist/`에 `tokens.css`, `tailwind.css`, `tokens.json`이 생겨요.
+`✓ paper: 22 contrast pairs pass`가 보이면 통과예요. `packages/tokens/dist/`에 `tokens.css`, `tailwind.css`, `tokens.json`이 생겨요.
 
 > [!TIP]
 > `packages/tokens/src/themes/paper.tokens.json`에서 라이트 배경색(`bg`)을 `#FFFFFF`로 바꾸고 다시 만들어 보세요. `paper light: UI-003 bg is pure white`로 멈추고 아무 파일도 만들지 않아요. 원칙이 실제로 동작하는 걸 볼 수 있어요.
